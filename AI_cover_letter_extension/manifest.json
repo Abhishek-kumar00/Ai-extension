@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "AI Cover Letter Assistant",
+  "version": "1.0",
+  "description": "Generates a cover letter based on a job description using your AI agent.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "options_page": "options.html",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

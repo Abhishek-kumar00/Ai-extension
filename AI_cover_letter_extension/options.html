@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex items-center justify-center">
+    <div class="max-w-2xl w-full p-8 bg-white rounded-lg shadow-md space-y-6">
+        <h1 class="text-2xl font-bold text-gray-800">Your Information</h1>
+        <p class="text-gray-600">This information will be used to generate your cover letters. It is stored locally in your browser.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+                <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                <input type="text" id="name" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+            </div>
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                <input type="email" id="email" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+            </div>
+            <div>
+                <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                <input type="tel" id="phone" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+            </div>
+        </div>
+
+        <div>
+            <label for="skills" class="block text-sm font-medium text-gray-700">Skills (comma-separated)</label>
+            <textarea id="skills" rows="3" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" placeholder="e.g., Python, JavaScript, Project Management"></textarea>
+        </div>
+
+        <div>
+            <label for="projects" class="block text-sm font-medium text-gray-700">Projects (comma-separated)</label>
+            <textarea id="projects" rows="3" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" placeholder="e.g., AI Chatbot, Personal Website"></textarea>
+        </div>
+
+        <div>
+            <label for="experience" class="block text-sm font-medium text-gray-700">Experience (comma-separated)</label>
+            <textarea id="experience" rows="3" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" placeholder="e.g., Software Engineer at Google, Intern at Microsoft"></textarea>
+        </div>
+
+        <div>
+            <label for="colabUrl" class="block text-sm font-medium text-gray-700">Google Colab URL</label>
+            <input type="url" id="colabUrl" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" placeholder="https://....colab.research.google.com">
+        </div>
+
+        <div class="flex justify-end space-x-4">
+            <button id="save" class="px-6 py-2 bg-indigo-600 text-white font-semibold rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Save</button>
+            <div id="status" class="text-green-600 self-center"></div>
+        </div>
+
+    </div>
+    <script src="options.js"></script>
+</body>
+</html>
